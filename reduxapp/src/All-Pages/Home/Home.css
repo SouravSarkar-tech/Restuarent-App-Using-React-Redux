@@ -1,0 +1,109 @@
+.main {
+    position: relative;
+    background: rgb(251, 244, 244);
+}
+
+.main-topmost {
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-topmost-heading {
+    text-align: center;
+    width: 58%;
+    padding: 7px 0;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+p {
+    padding: 0 2px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Gilroy-Light", sans-serif;
+    margin-bottom: 7px;
+    color: #5a5858;
+}
+
+.main-topmost-maincategory {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.main-topmost-subcategory {
+    width: 90%;
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    margin-bottom: -20px;
+}
+
+.main-topmost-subcategory::-webkit-scrollbar {
+    display: none;
+}
+
+.main-topmost-maincategory .btn {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Gilroy", sans-serif;
+}
+
+.main-topmost-subcategory .btn-underline {
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    margin-bottom: 1px;
+    font-family: "Gilroy", sans-serif;
+}
+.main-topmost-subcategory .btn-underline:hover{
+    background:rgb(235, 237, 209);
+    padding:1px 4px;
+    border-radius: 10px;
+}
+.main-mid {
+    height: calc(95vh - (150px + 90px));
+}
+
+.main-mid-whole {
+    height: calc(93vh - 140px);
+}
+
+
+.main-bottom {
+    background: #FFD504;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.main-bottom h1 {
+    text-align: center;
+    font-size: 21px;
+    padding: 2px 0;
+}
+
+@media only screen and (max-width: 520px) {
+    .main-mid {
+        height: calc(100vh - (150px + 80px));
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .main-mid-whole {
+        height: calc(100vh - 150px);
+    }
+}

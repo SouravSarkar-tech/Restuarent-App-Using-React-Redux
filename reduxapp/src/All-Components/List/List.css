@@ -1,0 +1,38 @@
+.List {
+    padding: 10px 20px;
+}
+
+.product-item {
+    border: 2px solid #fdd81d;
+    border-radius: 10px;
+    padding: 11px;
+    cursor: pointer;
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-description {
+    width: 80%;
+}
+
+.product-description h1 {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+}
+
+.product-description p {
+    font-size: 14px;
+    color: #4c4b4b;
+    font-weight: 550;
+    font-family: "Gilroy", sans-serif;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 800;
+    margin-right: 19px;
+    width: 14%;
+    text-align: right;
+}
