@@ -2,19 +2,20 @@ import React, { useState,useEffect } from "react";
 import './Home.css'
 import { useSelector } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import {List,ProductModal} from "../../All-Components/main";
+import {List,ProductModal, LangModal} from "../../All-Components/main";
 
 
 const Home = () => {
   const [mCat, setMCat] = useState([]);
   const [sCat, setSCat] = useState([]);
-  const [fProducts, setFProducts] = useState([]);
+  const [sProducts, setSProducts] = useState([]);
   const [activeMCat, setActiveMCat] = useState({});
   const [activeSCat, setActiveSCat] = useState({});
   const [params] = useSearchParams();
   const [totalBPrice, setTotalBPrice] = useState(0);
   const [showProductModal, setShowProductModal] = useState(false);
   const [productSub, setProductSub] = useState({});
+  const [showLangModal, setShowLangModal] = useState(false);
   
 
   const categories = useSelector((state) => state.category?.categories);
@@ -38,7 +39,7 @@ useEffect(() => {
   }, [mCat]);
 
 useEffect(() => {
-    setFProducts(
+    setSProducts(
       products.filter(
         (product) =>
           product.parentId == (params.get("sub") || sCat[0]?.id)
@@ -61,7 +62,7 @@ useEffect(() => {
   }
 
  const handleSCat = (id) => {
-    setFProducts(products.filter((product) => product.parentId == id));
+    setSProducts(products.filter((product) => product.parentId == id));
     const activesubcat = categories?.find((category) => category.id == id);
     setActiveSCat(activesubcat.id);
     navigate(
@@ -122,7 +123,7 @@ useEffect(() => {
           basket.products.length == 0 ? "main-mid-whole" : "main-mid"
         }
       >
-        <List  products={fProducts}
+        <List  products={sProducts}
           setShowProductModal={setShowProductModal}
           setProductSub={setProductSub}/>
       </div>
@@ -138,6 +139,14 @@ useEffect(() => {
           </h1>
         </div>
       )}
+
+      <div
+        className="lang-btn btn"
+        onClick={() => setShowLangModal(!showLangModal)}
+      >
+        Lg
+      </div>
+
        {showProductModal && (
         <ProductModal
           setShowProductModal={setShowProductModal}
@@ -145,6 +154,11 @@ useEffect(() => {
           showProductModal={showProductModal}
         />
       )}
+
+      <LangModal
+      setShowLangModal={setShowLangModal}
+        showLangModal={showLangModal}
+      />
 
 
     </div>

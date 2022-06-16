@@ -1,0 +1,76 @@
+.lang-modal {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -300;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.lang-modal-view {
+    opacity: 1;
+    z-index: 320;
+}
+
+.lang-modal-content {
+    width: 95%;
+    background: rgb(253, 243, 243);
+    transform: translate(-50%, -50%) scale(0.10);
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    z-index: -410;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.lang-modal-content-view {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    z-index: 400;
+}
+
+.lang-modal-content-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 20px;
+}
+
+.lang-modal-content-name h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+
+.lang-modal-content-name h3 {
+    text-align: center;
+    width: 80%;
+    line-height: 26px;
+    margin-bottom: 12px;
+}
+
+.lang-modal-content-name button {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: "Gilroy", sans-serif;
+    margin-top: 12px;
+
+}
+
+.lang-modal-content-name button:hover{
+    background-color: rgb(254, 222, 11);
+}
+
+button h3 {
+    padding: 0;
+    margin: 0;
+}

@@ -45,6 +45,7 @@ p {
     overflow-x: scroll;
     -ms-overflow-style: none;
     margin-bottom: -20px;
+    margin-left: 100px; 
 }
 
 .main-topmost-subcategory::-webkit-scrollbar {
@@ -66,11 +67,13 @@ p {
     margin-bottom: 1px;
     font-family: "Gilroy", sans-serif;
 }
-.main-topmost-subcategory .btn-underline:hover{
-    background:rgb(235, 237, 209);
-    padding:1px 4px;
+
+.main-topmost-subcategory .btn-underline:hover {
+    background: rgb(235, 237, 209);
+    padding: 1px 4px;
     border-radius: 10px;
 }
+
 .main-mid {
     height: calc(95vh - (150px + 90px));
 }
@@ -94,6 +97,17 @@ p {
     text-align: center;
     font-size: 21px;
     padding: 2px 0;
+}
+
+
+.lang-btn {
+    position: absolute;
+    padding: 10px;
+    border-radius: 12px;
+    right: 12px;
+    top: 12px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 520px) {
