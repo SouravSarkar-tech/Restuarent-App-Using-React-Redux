@@ -29,6 +29,8 @@ useEffect(() => {
     const category = categories?.find(
       c => c.id == setProductSub.parentId
     );
+     const mainCate = categories?.find((cate) => cate.id == category.parent);
+    setCategory(mainCate.name);
 }, []);
 
 const basket = useSelector((state) => state.basket.products);
