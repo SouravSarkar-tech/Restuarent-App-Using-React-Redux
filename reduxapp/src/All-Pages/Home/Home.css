@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    background: rgb(251, 244, 244);
+    background: rgb(250, 249, 249);
 }
 
 .main-topmost {
@@ -22,6 +22,7 @@ h1 {
     margin-top: 2px;
     font-weight: 500;
     letter-spacing: 0.7px;
+    font-weight: 400;
 }
 
 p {
@@ -31,6 +32,7 @@ p {
     font-family: "Gilroy-Light", sans-serif;
     margin-bottom: 7px;
     color: #5a5858;
+    line-height:  normal;
 }
 
 .main-topmost-maincategory {
@@ -69,8 +71,8 @@ p {
 }
 
 .main-topmost-subcategory .btn-underline:hover {
-    background: rgb(235, 237, 209);
-    padding: 1px 4px;
+    background: rgb(244, 226, 70);
+    padding: 1px 5px;
     border-radius: 10px;
 }
 
@@ -84,8 +86,8 @@ p {
 
 
 .main-bottom {
-    background: #FFD504;
-    height: 92px;
+    background: #f4cc03;
+    height: 94px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +97,8 @@ p {
 
 .main-bottom h1 {
     text-align: center;
-    font-size: 21px;
+    font-size: 25px;
+    font-weight: 600;
     padding: 2px 0;
 }
 
