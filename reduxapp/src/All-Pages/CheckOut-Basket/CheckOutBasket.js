@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react'
 import './CheckOut-Basket.css'
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { ConfirmModal } from '../../All-Components/main';
 
 
 const CheckOutBasket = () => {
@@ -13,6 +14,7 @@ const CheckOutBasket = () => {
   const [mCategories, setMCategories] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
   const [randomNumber, setRandomNumber] = useState(0);
+  const [showCModal, setShowCModal] = useState(false);
 
 useEffect(() => {
     setRandomNumber(Math.floor(Math.random() * (20 - 1 + 1)) + 1);
@@ -90,7 +92,7 @@ useEffect(() => {
                           <p>
                             {product.variant}
                             {product.extras.map((extra, index) => (
-                              <span key={index}>, {extra.name}</span>
+                              <span key={index}>  {extra.name}</span>
                             ))}
                           </p>
                         </div>
@@ -137,7 +139,8 @@ useEffect(() => {
         </div>
       ) : (
         <div
-          className="checkout-bottom">
+          className="checkout-bottom"
+          onClick={() => setShowCModal(true)}>
           <h1>Confirm Order</h1>
           <h1>
             £{totalBPrice.toFixed(2)} / {basket.length}{" "}
@@ -145,6 +148,10 @@ useEffect(() => {
           </h1>
         </div>
       )}
+        <ConfirmModal
+        showCModal={showCModal}
+        setShowCModal={setShowCModal}
+      />
     </div>
   )
 }
