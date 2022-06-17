@@ -1,8 +1,10 @@
 import React, { useState,useEffect } from "react";
 import './Home.css'
-import { useSelector } from "react-redux";
+import { useSelector} from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {List,ProductModal, LangModal} from "../../All-Components/main";
+//import translate from "../../i18n/translate";
+
 
 
 const Home = () => {
@@ -18,9 +20,12 @@ const Home = () => {
   const [showLangModal, setShowLangModal] = useState(false);
   
 
+  
+
   const categories = useSelector((state) => state.category?.categories);
   const products = useSelector((state) => state.product?.products);
   const basket = useSelector((state) => state.basket);
+
   const navigate = useNavigate();
   
 
@@ -60,7 +65,6 @@ useEffect(() => {
       { replace: true }
     );
   }
-
  const handleSCat = (id) => {
     setSProducts(products.filter((product) => product.parentId == id));
     const activesubcat = categories?.find((category) => category.id == id);
@@ -144,7 +148,7 @@ useEffect(() => {
         className="lang-btn btn"
         onClick={() => setShowLangModal(!showLangModal)}
       >
-        Lg
+      <img src="../../images/Google-translate-icon-design-on-transparent-background-PNG.png" />
       </div>
 
        {showProductModal && (
@@ -154,6 +158,7 @@ useEffect(() => {
           showProductModal={showProductModal}
         />
       )}
+
 
       <LangModal
       setShowLangModal={setShowLangModal}

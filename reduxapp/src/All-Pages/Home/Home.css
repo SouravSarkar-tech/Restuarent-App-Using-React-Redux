@@ -32,7 +32,7 @@ p {
     font-family: "Gilroy-Light", sans-serif;
     margin-bottom: 7px;
     color: #5a5858;
-    line-height:  normal;
+    line-height: normal;
 }
 
 .main-topmost-maincategory {
@@ -47,7 +47,7 @@ p {
     overflow-x: scroll;
     -ms-overflow-style: none;
     margin-bottom: -20px;
-    margin-left: 100px; 
+    margin-left: 100px;
 }
 
 .main-topmost-subcategory::-webkit-scrollbar {
@@ -105,12 +105,17 @@ p {
 
 .lang-btn {
     position: absolute;
-    padding: 10px;
+    padding: 6px;
     border-radius: 12px;
     right: 12px;
     top: 12px;
     background: rgb(255, 255, 255);
     cursor: pointer;
+}
+
+img {
+    width: 27px;
+    height: 27px;
 }
 
 @media only screen and (max-width: 520px) {
