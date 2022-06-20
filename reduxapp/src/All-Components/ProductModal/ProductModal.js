@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./ProductModal.css";
 import allTheActions from "../../State-Management/AllActions/main";
+//import translate from "../../i18n/translate";
 
 
 const ProductModal = ({ setShowProductModal, setProductSub }) => {

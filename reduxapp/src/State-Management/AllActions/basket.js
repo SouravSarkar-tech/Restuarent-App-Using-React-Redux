@@ -20,17 +20,6 @@ const increaseQtyToTheBasketProduct = (name, qty, price, variant, extras) => {
   };
 };
 
-function openSuccessModal() {
-	return {
-		type: OPEN_SUCCESS_MODAL,
-	}
-}
-function closeSuccessModal() {
-	return {
-		type: CLOSE_SUCCESS_MODAL,
-	}
-}
-
 
 const clearTheBasket = () => {
   return {
@@ -41,7 +30,5 @@ const clearTheBasket = () => {
 export default {
   addProductToTheBasket,
   clearTheBasket,
-  increaseQtyToTheBasketProduct,
-  openSuccessModal,
-  closeSuccessModal
+  increaseQtyToTheBasketProduct
 };

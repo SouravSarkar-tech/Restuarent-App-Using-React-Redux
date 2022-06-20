@@ -3,6 +3,7 @@ import './ConfirmModal.css'
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import allTheActions from '../../State-Management/AllActions/main';
+//import translate from '../../i18n/translate';
 
 const ConfirmModal = ({ showCModal, setShowCModal }) => {
   const navigate = useNavigate();

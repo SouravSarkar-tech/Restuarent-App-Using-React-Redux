@@ -3,6 +3,7 @@ import './CheckOut-Basket.css'
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ConfirmModal } from '../../All-Components/main';
+//import translate from "../../i18n/translate";
 
 
 const CheckOutBasket = () => {
