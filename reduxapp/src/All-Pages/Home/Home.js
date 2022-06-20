@@ -3,7 +3,7 @@ import './Home.css'
 import { useSelector} from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {List,ProductModal, LangModal} from "../../All-Components/main";
-//import translate from "../../i18n/translate";
+import translate from "../../i18n/translate";
 
 
 
@@ -136,10 +136,10 @@ useEffect(() => {
         <></>
       ) : (
         <div className="main-bottom" onClick={BasketHandler}>
-          <h1>View Basket</h1>
+          <h1>{translate("btn.viewbasket")}</h1>
           <h1>
             £{totalBPrice.toFixed(2)} / {basket.products.length}{" "}
-            Item
+            {translate("btn.item")}
           </h1>
         </div>
       )}

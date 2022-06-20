@@ -33,22 +33,23 @@ const lang = useSelector((state) => state.lang);
         <div className="lang-modal-content-name">
           <h1>Choose Language</h1>
           <button
-            className={lang == LOCALES.ENGLISH ? "btn active" : "btn"}
+            className={lang === LOCALES.ENGLISH ? "btn active" : "btn"}
             onClick={() => languageHandler( LOCALES.ENGLISH)}
-          >
+          > 
+            <img src="../../images/flag1.png" alt="united states" />
             <h3>English</h3>
           </button>
           <button
-            className={lang ==  LOCALES.PORTUGUESE ? "btn active" : "btn"}
-            onClick={ () => languageHandler( LOCALES.PORTUGUESE)}
-          > 
-            <h3>Portuguese</h3>
+            className={lang ===   LOCALES.GERMAN  ? "btn active" : "btn"}
+            onClick={() => languageHandler(  LOCALES.GERMAN )}
+          > <img src="../../images/flag2.png" alt="germany" />
+            <h3>German</h3>
           </button>
           <button
-            className={lang ==  LOCALES.FRENCH ? "btn active" : "btn"}
-            onClick={ () => languageHandler( LOCALES.FRENCH)}
-          >
-                <h3>French</h3>
+            className={lang ===  LOCALES.JAPANESE ? "btn active" : "btn"}
+            onClick={() => languageHandler( LOCALES.JAPANESE)}
+          >     <img src="../../images/flag3.png" alt="japan" />
+                <h3>Japanese</h3>
           </button>
         </div>
       </div>   

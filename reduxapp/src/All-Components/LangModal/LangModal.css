@@ -46,29 +46,34 @@
 .lang-modal-content-name h1 {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 18px;
 }
 
+.lang-modal-content-name img {
+    width: 40px;
+    height: 35px;
+    margin-bottom: 0px;
+}
 
 .lang-modal-content-name h3 {
     text-align: center;
     width: 80%;
-    line-height: 26px;
-    margin-bottom: 12px;
+    font-size: 25px;
+    line-height: 22px;
+    margin-bottom: 0px;
 }
 
 .lang-modal-content-name button {
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 22px;
     font-family: "Gilroy", sans-serif;
     margin-top: 12px;
 
 }
 
-.lang-modal-content-name button:hover{
+/* .lang-modal-content-name button:hover{
     background-color: rgb(254, 222, 11);
-}
+} */
 
 button h3 {
     padding: 0;

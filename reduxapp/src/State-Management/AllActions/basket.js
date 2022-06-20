@@ -2,8 +2,6 @@ import {
   ADD_PRODUCT_TO_THE_BASKET,
   CLEAR_THE_BASKET,
   INCREASE_QTY_TO_BASKET_PRODUCT,
-  OPEN_SUCCESS_MODAL,
-  CLOSE_SUCCESS_MODAL
 } from "../allaction-type";
 
 const addProductToTheBasket = (product) => {

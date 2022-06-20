@@ -6,7 +6,7 @@ const allTheActions = {
  product,
   category,
   basket,
-  language
+  language,
   
 };
 

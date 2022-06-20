@@ -1,11 +1,13 @@
-import { SET_LANGUAGE } from "../allaction-type";
+import { SET_LANG } from "../allaction-type";
 
 
 const langset = (lang) => {
   return {
-    type: SET_LANGUAGE,
+    type: SET_LANG,
     payload: lang,
   };
 }
 
-export default {langset};
+export default {
+  langset,
+};

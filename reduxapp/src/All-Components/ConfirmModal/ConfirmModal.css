@@ -37,7 +37,7 @@
 }
 
 .confirm-modal-content-d h1 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight:800;
     margin-bottom: 16px;
 }
@@ -60,7 +60,7 @@
 }
 
 .confirm-modal-content-d-buttons button {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     font-family: "Gilroy", sans-serif;
 }

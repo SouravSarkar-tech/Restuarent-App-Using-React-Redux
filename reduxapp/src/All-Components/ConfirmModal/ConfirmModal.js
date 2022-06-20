@@ -3,7 +3,7 @@ import './ConfirmModal.css'
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import allTheActions from '../../State-Management/AllActions/main';
-//import translate from '../../i18n/translate';
+import translate from '../../i18n/translate';
 
 const ConfirmModal = ({ showCModal, setShowCModal }) => {
   const navigate = useNavigate();
@@ -25,15 +25,15 @@ const ConfirmModal = ({ showCModal, setShowCModal }) => {
             : "confirm-modal-content"
         }>
         <div className="confirm-modal-content-d">
-          <h1>Confirm Order</h1>
+          <h1>{translate("cm.title")}</h1>
           <img src="../../images/confirm.png" alt="imge" />
-          <h3>By placing this order you agree that you are present in Kings Arms and over 18 years old.</h3>
+          <h3>{translate("cm.p")}</h3>
           <div className="confirm-modal-content-d-buttons">
             <button className="btn" onClick={() => setShowCModal(false)}>
-              Cancel
+              {translate("cm.cancel")}
             </button>
             <button className="btn active" onClick={placeOrderHndler}>
-              Place Order
+              {translate("cm.placeOrder")}
             </button>
           </div>
         </div>

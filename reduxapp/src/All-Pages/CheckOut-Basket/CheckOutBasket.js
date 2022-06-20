@@ -3,7 +3,7 @@ import './CheckOut-Basket.css'
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ConfirmModal } from '../../All-Components/main';
-//import translate from "../../i18n/translate";
+import translate from "../../i18n/translate";
 
 
 const CheckOutBasket = () => {
@@ -115,7 +115,7 @@ useEffect(() => {
         ) : (
           <>
             <div className="checkout-topmost-addnotes">
-              <label htmlFor="addnote">Add Notes:</label>
+              <label htmlFor="addnote">{translate("basket.notes")}</label>
               <textarea name="addnote" id="addnote"></textarea>
             </div>
             <hr className="hrcheckout" />
@@ -128,7 +128,7 @@ useEffect(() => {
       ) : (
         <div className="checkout-middle">
           <h1>
-            Table Number:{" "}
+            {translate("basket.table")}:{" "}
             <span className="checkout-middle-number">{randomNumber}</span>
           </h1>
         </div>
@@ -142,10 +142,10 @@ useEffect(() => {
         <div
           className="checkout-bottom"
           onClick={() => setShowCModal(true)}>
-          <h1>Confirm Order</h1>
+          <h1> {translate("basket.confirm")}</h1>
           <h1>
             £{totalBPrice.toFixed(2)} / {basket.length}{" "}
-            Item
+            {translate("btn.item")}
           </h1>
         </div>
       )}

@@ -10,12 +10,13 @@ import { I18nProvider } from "./i18n/main";
 
 
 const App = () => {
-  //const lang = useSelector((state) => state.lang);
+    const lang = useSelector((state) => state.lang);
+
 
   return (
     <>
     <div className="app">
-      {/* <I18nProvider locale={lang}> */}
+      <I18nProvider locale={lang}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>} />
@@ -26,7 +27,7 @@ const App = () => {
             <Route path="*" element={<Error/>} />
           </Routes>
         </BrowserRouter>
-        {/* </I18nProvider> */}
+        </I18nProvider>
     </div>
     </>
   );

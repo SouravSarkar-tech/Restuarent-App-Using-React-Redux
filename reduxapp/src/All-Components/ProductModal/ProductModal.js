@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./ProductModal.css";
 import allTheActions from "../../State-Management/AllActions/main";
-//import translate from "../../i18n/translate";
+import translate from "../../i18n/translate";
 
 
 const ProductModal = ({ setShowProductModal, setProductSub }) => {
@@ -161,7 +161,7 @@ const addtoorderHandler = () => {
         {setProductSub.variants && (
           <>
             <div className="all-sub-variant">
-              <h1>Size</h1>
+              <h1>{translate("pm.size")}</h1>
               {setProductSub.variants.map((variant, index) => (
                 <div key={index} className="variant-container">
                   <input
@@ -189,7 +189,7 @@ const addtoorderHandler = () => {
         {setProductSub.extras && (
           <>
             <div className="all-sub-options">
-              <h1>Select Options</h1>
+              <h1>{translate("pm.options")}</h1>
 
               {setProductSub.extras.map((extra, index) => (
                 <div key={index} className="option-container">
@@ -205,7 +205,7 @@ const addtoorderHandler = () => {
                       onChange={onChangeExtrasHandler}
                     />
                     <div className="checkbox-tick">
-                       ✓
+                       <img src="../../images/tickmark.png" alt="tickmark" />
                     </div>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ const addtoorderHandler = () => {
 
         <div className="all-sub-btn">
           <button className="btn active" onClick={addtoorderHandler}>
-            Add To Order
+            {translate("btn.addtoorder")}
           </button>
         </div>
       </div>

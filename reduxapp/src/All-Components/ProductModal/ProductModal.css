@@ -153,11 +153,16 @@
     font-size: larger;
 }
 
+.checkbox-tick img {
+    height: 16px;
+    width: 16px;
+
+}
 
 input:checked {
     background: transparent;
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
     z-index: 104;
 }
 
@@ -168,6 +173,13 @@ input:checked~.checkbox-tick {
     transform: translate(-50%, -50%);
     visibility: visible;
     z-index: -22;
+}
+
+input:checked~.checkbox-tick img {
+    background: #FFD504;
+    height: 20px;
+    width: 20px;
+
 }
 
 .all-sub-qty {
@@ -189,7 +201,7 @@ input:checked~.checkbox-tick {
     border: 3px solid #FFD504;
     border-radius: 10px;
     font-weight: 800;
-    font-size:20px;
+    font-size: 20px;
 }
 
 
